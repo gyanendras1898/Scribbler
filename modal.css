@@ -1,0 +1,79 @@
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  padding: 25px;
+  background: white;
+  width: 22%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+}
+.heading {
+  width: 100%;
+  text-align: center;
+}
+.close {
+  margin-left: auto;
+  cursor: pointer;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+.label {
+  margin-bottom: 8px;
+}
+
+.form-input {
+  background-color: rgb(241, 241, 241);
+  padding: 12px;
+  border: none;
+}
+
+.primary {
+  width: 100%;
+  padding: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(91, 183, 98);
+}
+
+.primary:hover {
+  background-color: rgb(91, 183, 98, 0.4);
+}
+
+.primary:focus {
+  outline: none;
+}
+.action-container {
+  margin: 16px;
+  padding-top: 24px;
+}
+.sign-up-refer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up-refer {
+  color: blue;
+  cursor: pointer;
+}
+.post-input {
+  background-color: rgb(241, 241, 241);
+  padding: 12px;
+  border: none;
+}

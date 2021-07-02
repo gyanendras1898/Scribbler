@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./post.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Post</title>
+</head>
+
+<body onload="addPostContent()">
+    <header>
+        <div class="logo-container">
+            <h1>Scribbler</h1>
+            <h4>Explore,imagine,create</h4>
+        </div>
+        <div class="action-container">
+
+            <button onclick="signInClickHandler()" class="primary-button">Sign In</button>
+            <button onclick="signUpClickHandler()" class="primary-button">Sign Up</button>
+
+        </div>
+    </header>
+
+    <div class="action-container">
+        <button onclick="addAllElementClickHandler()" class="primary-button" style="margin-right: 16px;">Get All
+            Post</button>
+        <button onclick="addPostClickHandler()" class="primary-button" style="margin-right: 16px;">Add Post</button>
+        <button onclick="undoClickHandler()" class="primary-button">Undo Delete</button>
+    </div>
+
+    <div class="main-container">
+
+        <!-- <div class="card">
+
+            <div class="author-container">
+                <h5>Jimi</h5>
+            </div>
+            <div class="post-container">
+                <div>
+                    <h3>Hello there! This is Post 1.</h3>
+                </div>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+                </p>
+                <i class="fa fa-trash trash-icon" aria-hidden="true"></i>
+                <i class="fa fa-ellipsis-h ellipsis-icon" aria-hidden="true"></i>
+
+            </div>
+        </div> -->
+
+    </div>
+
+    <!--sign in modal-->
+    <div id="sign-in-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="heading">Welcome Back!</h3>
+                <span onclick="closeSignInClickHandler()">
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </span>
+            </div>
+            <form>
+                <div class="input-container">
+                    <label class="label"> Username </label>
+                    <input class="form-input" type="text" placeholder="Enter Username" type="text" />
+                </div>
+
+                <div class="input-container">
+                    <label class="label"> Password </label>
+                    <input class="form-input" type="password" placeholder="Enter password" type="text" />
+                </div>
+
+            </form>
+            <div class="action-container">
+                <button class="primary"> Sign In</button>
+            </div>
+            <div class="sign-up-refer-container">
+                <div class="not-a-member">Not a member?</div>
+                <div onclick="closeSignInClickHandler(); signUpClickHandler()" class="sign-up-refer">Sign Up</div>
+            </div>
+        </div>
+    </div>
+
+    <!--sign up modal-->
+    <div id="sign-up-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="heading">Get Started!</h3>
+                <span onclick="closeSignUpClickHandler()">
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </span>
+            </div>
+            <form>
+                <div class="input-container">
+                    <label class="label"> Full name </label>
+                    <input class="form-input" type="text" placeholder="Enter full name" type="text" />
+                </div>
+                <div class="input-container">
+                    <label class="label"> Username </label>
+                    <input class="form-input" type="text" placeholder="Enter username" type="text" />
+                </div>
+                <div class="input-container">
+                    <label class="label"> Password </label>
+                    <input class="form-input" type="password" placeholder="Enter password" type="text" />
+                </div>
+                <div class="input-container">
+                    <label class="label"> Confirm Password </label>
+                    <input class="form-input" type="password" placeholder="Enter confirm password" type="text" />
+                </div>
+            </form>
+            <div class="action-container">
+                <button class="primary"> Sign Up!</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Add post in post container-->
+    <div id="add-post" class="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h3 class="heading">Get Started!</h3>
+                <span onclick="closeAddPostClickHandler()">
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </span>
+            </header>
+
+            <form>
+                <div class="input-container">
+                    <label class="label"> Author Name </label>
+                    <input class="post-input" type="text" placeholder="Enter full name" type="text" />
+                </div>
+                <div class="input-container">
+                    <label class="label"> Tittle </label>
+                    <input class="post-input" type="text" placeholder="Enter Title" type="text" />
+                </div>
+                <div class="input-container">
+                    <label class="label"> Summary </label>
+                    <textarea class="post-input" type="text" placeholder="Enter Post" type="text" rows="5"></textarea>
+                </div>
+            </form>
+            <div class="action-container">
+                <button class="primary" onclick="savePostClickHandler()"> Save Post</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="./post.js" type="text/javascript"></script>
+
+</body>
+
+</html>

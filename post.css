@@ -1,0 +1,67 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary-button {
+  background: #007580;
+  padding: 8px;
+  color: white;
+  min-width: 75px;
+}
+body {
+  background-color: #fed049;
+}
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  border: solid;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 40%;
+  margin-top: 10px;
+  min-width: 40%;
+
+  box-shadow: 22px 22px 35px 10px rgba(191, 185, 145, 0.85);
+  -webkit-box-shadow: 22px 22px 35px 10px rgba(191, 185, 145, 0.85);
+  -moz-box-shadow: 22px 22px 35px 10px rgba(191, 185, 145, 0.85);
+}
+.author-container {
+  background-color: white;
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.post-container {
+  position: relative;
+  flex-basis: 80%;
+  background-color: #d8ebe4;
+  padding-left: 16px;
+}
+.post-container:hover {
+  background-color: lightgrey;
+}
+.trash-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+.trash-icon:hover {
+  color: red;
+}
+.ellipsis-icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+.action-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
